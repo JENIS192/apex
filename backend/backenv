@@ -1,0 +1,27 @@
+# ---- Server ----
+NODE_ENV=development
+PORT=5000
+# Number of reverse proxies in front of the API (frontend server / Nginx / ALB)
+TRUST_PROXY=1
+
+# ---- MySQL ----
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=change_this_password
+DB_NAME=apex_noir
+
+# ---- Auth ----
+# Generate with: node -e "console.log(require('crypto').randomBytes(48).toString('hex'))"
+JWT_SECRET=replace-with-a-long-random-secret-of-at-least-32-characters
+JWT_EXPIRES_IN=7d
+# Set to true when the site is served over HTTPS (production)
+COOKIE_SECURE=false
+
+# ---- Uploads (relative to backend/ or an absolute path, e.g. an EFS mount) ----
+UPLOAD_DIR=uploads
+
+# ---- First admin account (created on first start if it does not exist) ----
+ADMIN_NAME=Store Administrator
+ADMIN_EMAIL=admin@apexnoir.local
+ADMIN_PASSWORD=ChangeMe!2026

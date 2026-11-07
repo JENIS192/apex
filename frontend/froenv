@@ -1,0 +1,6 @@
+# Port the storefront is served on
+PORT=3000
+# Where the backend API lives. The frontend server proxies /api and /uploads here,
+# so the browser only ever talks to ONE origin and CORS is never required.
+# AWS: set this to the internal App-tier load balancer, e.g. http://internal-apex-app-123.elb.amazonaws.com
+BACKEND_URL=http://localhost:5000
